@@ -1,0 +1,72 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Helium",
+	"patterns": [
+		{ "include": "#comments" },
+		{ "include": "#let" },
+		{ "include": "#keywords" },
+		{ "include": "#strings" },
+		{ "include": "#identifiers" },
+		{ "include": "#numbers" }
+	],
+	"repository": {
+    "let": {
+			"patterns": [{
+				"name": "support.function.he",
+        "match": "\\b(let|and)\\s+(rec\\s+)?([`a-z_][a-zA-Z0-9_']*)(\\s+[`a-z_][a-zA-Z0-9_']*)*",
+        "captures": {
+          "1": { "name": "keyword.control.he" },
+          "2": { "name": "keyword.control.he" },
+          "3": { "name": "entity.name.function.he" }
+        }
+			}]
+    },
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.he",
+        "match": "\\b(and|begin|data|effect|elif|else|end|export|extern|finally|fn|forall|handle|handler|if|import|in|include|let|match|module|of|open|rec|return|sig|signature|struct|then|this|type|val|with|Effect|Sig|Type)\\b"
+			}]
+    },
+    "numbers": {
+			"patterns": [{
+				"name": "constant.numeric.he",
+        "match": "\\d"
+			}]
+    },
+    "types": {
+			"patterns": [{
+				"name": "entity.name.type.he",
+        "match": "[a-z_][0-9a-zA-Z_']*"
+			}]
+    },
+    "identifiers": {
+			"patterns": [{
+				"name": "entity.name.he",
+        "match": "[a-z_][0-9a-zA-Z_']*"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.he",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.he",
+					"match": "\\\\."
+				}
+			]
+    },
+    "comments": {
+			"name": "comment.block.he",
+			"begin": "\\(\\*",
+			"end": "\\*\\)",
+			"patterns": [
+				{
+					"name": "constant.character.escape.he",
+					"match": "\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.he"
+}

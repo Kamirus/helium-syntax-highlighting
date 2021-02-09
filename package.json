@@ -1,0 +1,25 @@
+{
+    "name": "helium-syntax-highlighting",
+    "displayName": "Helium Syntax Highlighting",
+    "description": "Syntax highlighting for Helium",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.52.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "he",
+            "aliases": ["Helium", "he"],
+            "extensions": [".he","she"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "he",
+            "scopeName": "source.he",
+            "path": "./syntaxes/he.tmLanguage.json"
+        }]
+    }
+}
