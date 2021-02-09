@@ -3,14 +3,15 @@
 	"name": "Helium",
 	"patterns": [
 		{ "include": "#comments" },
-		{ "include": "#let" },
+		{ "include": "#types" },
+		{ "include": "#lets" },
 		{ "include": "#keywords" },
 		{ "include": "#strings" },
 		{ "include": "#identifiers" },
 		{ "include": "#numbers" }
 	],
 	"repository": {
-    "let": {
+    "lets": {
 			"patterns": [{
 				"name": "support.function.he",
         "match": "\\b(let|and)\\s+(rec\\s+)?([`a-z_][a-zA-Z0-9_']*)(\\s+[`a-z_][a-zA-Z0-9_']*)*",
@@ -36,7 +37,7 @@
     "types": {
 			"patterns": [{
 				"name": "entity.name.type.he",
-        "match": "[a-z_][0-9a-zA-Z_']*"
+        "match": "[A-Z][0-9a-zA-Z_']*"
 			}]
     },
     "identifiers": {
