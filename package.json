@@ -21,5 +21,10 @@
             "scopeName": "source.he",
             "path": "./syntaxes/he.tmLanguage.json"
         }]
+    },
+    "publisher": "Kamirus",
+    "repository": {
+      "type": "git",
+      "url": "git://github.com/Kamirus/helium-syntax-highlighting.git"
     }
 }
