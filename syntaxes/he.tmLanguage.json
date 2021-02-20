@@ -64,7 +64,8 @@
 			"patterns": [
 				{
 					"name": "constant.character.escape.he",
-					"match": "\\."
+					"match": "\\.",
+					"include": "#comments"
 				}
 			]
 		}
