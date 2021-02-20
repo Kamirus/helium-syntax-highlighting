@@ -26,5 +26,8 @@
     "repository": {
       "type": "git",
       "url": "git://github.com/Kamirus/helium-syntax-highlighting.git"
+    },
+    "scripts": {
+      "package": "vsce package"
     }
 }
